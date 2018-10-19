@@ -2,7 +2,7 @@
 
 namespace CompleteProject
 {
-    public class EnemyHealth : MonoBehaviour
+    public class EnemyHealthController : MonoBehaviour
     {
         public int startingHealth = 100;            // The amount of health the enemy starts the game with.
         public int currentHealth;                   // The current health the enemy has.
@@ -100,7 +100,7 @@ namespace CompleteProject
             isSinking = true;
 
             // Increase the score by the enemy's score value.
-            ScoreManager.score += scoreValue;
+            ScoreController.score += scoreValue;
 
             // After 2 seconds destory the enemy.
             Destroy (gameObject, 2f);

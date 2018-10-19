@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 114185031058166720}
   - component: {fileID: 114287749072450554}
   - component: {fileID: 195795451410749390}
+  - component: {fileID: 54821940043624322}
   m_Layer: 0
   m_Name: EmenyZomBear
   m_TagString: Enemy
@@ -140,6 +141,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!54 &54821940043624322
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683097233559246}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 84
+  m_CollisionDetection: 0
 --- !u!95 &95983572846601448
 Animator:
   serializedVersion: 3

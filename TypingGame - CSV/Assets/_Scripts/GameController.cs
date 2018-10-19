@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     static public string[,] QuestionList { get; set; }
 
-    private EnemyController enemyController;
+    private EnemyInputController enemyInputController;
 
     void Awake()
     {
@@ -27,6 +27,6 @@ public class GameController : MonoBehaviour
     private void CreateEnemy()
     {
         Instantiate(enemy);
-        enemyController = GetComponent<EnemyController>();
+        enemyInputController = GetComponent<EnemyInputController>();
     }
 }

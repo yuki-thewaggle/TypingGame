@@ -1,67 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    private TypingSystem typingSystem = new TypingSystem();
-    private QuestionSet questionSet;
-    //private TextMesh sampleTextMesh;
-    private TextMesh inputTextMesh;
+    private PlayerHealthController playerHealthController;       // Reference to the player's heatlh.
+    public GameObject enemy;                // The enemy prefab to be spawned.
+    public float spawnTime = 3f;            // How long between each spawn.
+    public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
-    private string[] keys =
+
+    void Start()
     {
-            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
-            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-            "u", "v", "w", "x", "y", "z",
-            "-",
-    };
-
-    private void Start()
-    {
-        questionSet = GetComponent<QuestionSet>();
-
-        //sampleTextMesh = questionSet.sampleTextMesh;
-        inputTextMesh = questionSet.inputTextMesh;
-
-        SetInputText(inputTextMesh.text);
+        // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        playerHealthController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthController>();
     }
 
-    private void Update()
-    {
-        UpdateInput();
-    }
 
-    private void SetInputText(string questionText)
+    void Spawn()
     {
-        typingSystem.SetInputString(questionText);
-    }
-
-    private void UpdateInput()
-    {
-        foreach (string key in keys)
+        // If the player has no health left...
+        if (playerHealthController.currentHealth <= 0f)
         {
-            if (Input.GetKeyDown(key))
-            {
-                if (typingSystem.InputKey(key) == 1)
-                {
-                    UpdateText();
-                }
-                break;
-            }
-
-            if (typingSystem.isEnded())
-            {
-                Destroy(gameObject);
-                break;
-            }
+            // ... exit the function.
+            return;
         }
-    }
 
-    private void UpdateText()
-    {
-        //sampleTextMesh.text = "<color=red>" + typingSystem.GetInputedString() + "</color>" + typingSystem.GetRestString();
-        inputTextMesh.text = "<color=red>" + typingSystem.GetInputedKey() + "</color>" + typingSystem.GetRestKey();
+        // Find a random index between zero and one less than the number of spawn points.
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+
+        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
 }

@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace CompleteProject
 {
-    public class ScoreManager : MonoBehaviour
+    public class ScoreController : MonoBehaviour
     {
         public static int score;        // The player's score.
 
