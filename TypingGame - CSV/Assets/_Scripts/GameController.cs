@@ -5,7 +5,11 @@ using UnityEditor;
 
 public class GameController : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject[] enemies;
+    public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
+
+    private bool EnemyIsDead;
+
 
     static public string[,] QuestionList { get; set; }
 
@@ -26,7 +30,9 @@ public class GameController : MonoBehaviour
 
     private void CreateEnemy()
     {
-        Instantiate(enemy);
+        var enemy = enemies[Random.Range(0, enemies.Length)];
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
+        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
         enemyInputController = GetComponent<EnemyInputController>();
     }
 }

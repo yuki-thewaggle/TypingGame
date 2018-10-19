@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4726480635409224}
   - component: {fileID: 23653227825074896}
   - component: {fileID: 102729839534751194}
+  - component: {fileID: 114338902765054208}
   m_Layer: 0
   m_Name: Input
   m_TagString: Untagged
@@ -206,6 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 092fc1797ae8c7946b3c5cef0f81a8f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sinkSpeed: 2.5
+  deathClip: {fileID: 0}
+  scoreValue: 10
 --- !u!114 &114287749072450554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +219,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0926730d81748d64281693de565f5634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114338902765054208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1452463526695504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff6a3a4a659daf43b7ce467d060836f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114595259042475772
