@@ -98,21 +98,21 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
+    agentRadius: 0.75
+    agentHeight: 1.2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.25
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 674fb49e7a388b34cb12ee3bbea7df9f, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &11661131
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ Transform:
   - {fileID: 1961151248}
   - {fileID: 1326375143}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154859883 stripped
 GameObject:
@@ -314,7 +314,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 4fff99673a41e24439d527ad0bd6b569, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -454,11 +454,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4648166907525224, guid: b98f5ca962cf52f4296cae741cb159b0, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b98f5ca962cf52f4296cae741cb159b0, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &830898955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1866090740888020, guid: 50e9feedc53a5d04e819226340263e76,
+    type: 2}
+  m_PrefabInternal: {fileID: 1749489014}
+--- !u!114 &830898956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830898955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98031fb2011bd24fbc61ab9ea59a89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthController: {fileID: 0}
 --- !u!1001 &1072677163
 Prefab:
   m_ObjectHideFlags: 0
@@ -496,44 +513,44 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4792013771346482, guid: e45eb2713de6e2d499d0e8f8d118aae5, type: 2}
       propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114302063204551152, guid: e45eb2713de6e2d499d0e8f8d118aae5,
-        type: 2}
-      propertyPath: speed
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514100499722140, guid: e45eb2713de6e2d499d0e8f8d118aae5,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 344070526}
+    - target: {fileID: 114514100499722140, guid: e45eb2713de6e2d499d0e8f8d118aae5,
+        type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 575513970}
+    - target: {fileID: 136626542714077136, guid: e45eb2713de6e2d499d0e8f8d118aae5,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 136626542714077136, guid: e45eb2713de6e2d499d0e8f8d118aae5,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365025354041588, guid: e45eb2713de6e2d499d0e8f8d118aae5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048839647652578, guid: e45eb2713de6e2d499d0e8f8d118aae5, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45eb2713de6e2d499d0e8f8d118aae5, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1072677164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1893746643020916, guid: e45eb2713de6e2d499d0e8f8d118aae5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1072677163}
 --- !u!4 &1072677168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4792013771346482, guid: e45eb2713de6e2d499d0e8f8d118aae5,
     type: 2}
   m_PrefabInternal: {fileID: 1072677163}
---- !u!114 &1072677169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1072677164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c851a182898b74abb992b23f1b0728, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 344070526}
-  damageImage: {fileID: 575513970}
-  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1 &1326375142
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +624,7 @@ Prefab:
     - target: {fileID: 224172832383223682, guid: 4abea512ab173a94bb2db3821475e896,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224172832383223682, guid: 4abea512ab173a94bb2db3821475e896,
         type: 2}
