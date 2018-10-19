@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 95983572846601448}
   - component: {fileID: 114595259042475772}
   - component: {fileID: 114185031058166720}
+  - component: {fileID: 114287749072450554}
+  - component: {fileID: 195795451410749390}
   m_Layer: 0
   m_Name: EmenyZomBear
   m_TagString: Enemy
@@ -147,7 +149,7 @@ Animator:
   m_GameObject: {fileID: 1683097233559246}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c236aa7ad6dcabe47abc7d2cf903ae71, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a4c9c2108341524995f21f70ba46e61, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -186,6 +188,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 092fc1797ae8c7946b3c5cef0f81a8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114287749072450554
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683097233559246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0926730d81748d64281693de565f5634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114595259042475772
@@ -248,3 +261,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5385571, y: 0.000000029802322, z: 0.00059360266}
     m_Extent: {x: 0.70241565, y: 0.76117194, z: 0.37453073}
   m_DirtyAABB: 0
+--- !u!195 &195795451410749390
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683097233559246}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
