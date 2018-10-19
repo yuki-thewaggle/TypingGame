@@ -10,13 +10,10 @@ public class GameController : MonoBehaviour
     static public string[,] QuestionList { get; set; }
 
     private EnemyController enemyController;
-    private LoadText loadText;
 
     void Awake()
     {
-        loadText = GetComponent<LoadText>();
-        QuestionList = loadText.Load();
-        AssetDatabase.Refresh();
+        QuestionList = GetComponent<LoadText>().Load();
     }
 
     void Update()

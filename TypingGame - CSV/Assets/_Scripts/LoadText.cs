@@ -18,8 +18,7 @@ public class LoadText : MonoBehaviour
     {
         TextAsset textAsset = new TextAsset();
 
-        //textasset = Resources.Load(csvFileName) as TextAsset;
-        textAsset = AssetDatabase.LoadAssetAtPath("Assets/Resources/"+ csvFileName + ".csv", typeof(TextAsset)) as TextAsset;
+        textAsset = AssetDatabase.LoadAssetAtPath("Assets/_Resources/" + csvFileName + ".csv", typeof(TextAsset)) as TextAsset;
         AssetDatabase.Refresh();
 
         string textLines = textAsset.text;

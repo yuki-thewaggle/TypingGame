@@ -54,9 +54,10 @@ GameObject:
   - component: {fileID: 4714816770276272}
   - component: {fileID: 95983572846601448}
   - component: {fileID: 114595259042475772}
+  - component: {fileID: 114185031058166720}
   m_Layer: 0
   m_Name: EmenyZomBear
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,6 +177,17 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &114185031058166720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683097233559246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 092fc1797ae8c7946b3c5cef0f81a8f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114595259042475772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ccfd9505aea247ba5b0567986b1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sampleTextMesh: {fileID: 0}
   inputTextMesh: {fileID: 102729839534751194}
 --- !u!137 &137338944213721554
 SkinnedMeshRenderer:

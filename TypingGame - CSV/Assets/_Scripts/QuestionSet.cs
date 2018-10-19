@@ -12,7 +12,7 @@ public class QuestionSet : MonoBehaviour
 
     private string sampleText;
 
-    private void Awake()
+    private void Start()
     {
         int result = Random.Range(0, GameController.QuestionList.Length / 2);
 

@@ -40,7 +40,6 @@ public class TypingSystem
     //入力に成功すれば1，失敗すれば0を返す．
     public int InputKey(string input)
     {
-
         List<int> removeList = new List<int>();
 
         bool inputSucceeded = false;
