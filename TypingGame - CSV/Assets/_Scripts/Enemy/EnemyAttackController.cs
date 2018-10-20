@@ -53,17 +53,25 @@ public class EnemyAttackController : MonoBehaviour
         timer += Time.deltaTime;
 
         // If the timer exceeds the time between attacks, the player is in range and this enemy is alive...
-        if (timer >= timeBetweenAttacks && playerInRange/* && enemyHealthController.currentHealth > 0*/)
-        {
-            // ... attack.
-            Attack();
-        }
+        //if (timer >= timeBetweenAttacks && playerInRange/* && enemyHealthController.currentHealth > 0*/)
+        //{
+        //    // ... attack.
+        //    Attack();
+        //}
 
         // If the player has zero or less health...
         if (playerHealthController.currentHealth <= 0)
         {
             // ... tell the animator the player is dead.
             anim.SetTrigger("PlayerDead");
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Attack();
         }
     }
 

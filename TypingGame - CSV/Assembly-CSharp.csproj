@@ -87,6 +87,7 @@
     <Compile Include="Assets\_Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyHealthController.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyMovmentController.cs" />
+    <Compile Include="Assets\_Scripts\Enemy\FixRotate.cs" />
     <Compile Include="Assets\_Scripts\Enemy\QuestionSet.cs" />
     <Compile Include="Assets\_Scripts\GameManager\GameController.cs" />
     <Compile Include="Assets\_Scripts\GameManager\GameOverController.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\_Scripts\Player\PlayerHealthController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerMovementController.cs" />
     <Compile Include="Assets\_Scripts\Score\ScoreController.cs" />
-    <Compile Include="Assets\FixRotate.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />

@@ -4,14 +4,14 @@ public class GameOverController : MonoBehaviour
 {
     //public PlayerHealth playerHealth;       // Reference to the player's health.
     [HideInInspector] public PlayerHealthController playerHealthController;       // Reference to the player's health.
-
+    public Canvas HUDCanvas;
     Animator anim;                          // Reference to the animator component.
 
 
     void Awake()
     {
         // Set up the reference.
-        anim = GetComponent<Animator>();
+        anim = HUDCanvas.GetComponent<Animator>();
 
         playerHealthController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealthController>();
 

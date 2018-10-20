@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4356803910126808}
   - component: {fileID: 114910756822696706}
   - component: {fileID: 114306341749529476}
+  - component: {fileID: 114424502181836064}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,7 +53,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20badd8c7a9bb2d4c83242deab2be89a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1174725503610496, guid: 160e5a3154d757f458206bae1f84186c, type: 2}
+  enemies:
+  - {fileID: 1446263980497254, guid: 5e63ab9cef8c99246b95790a3960656a, type: 2}
+  - {fileID: 1171187368322460, guid: 1aff3e3cb66127d4ab1d5f26813f7b17, type: 2}
+  - {fileID: 1498642687611302, guid: da7ec5f0be3a24e47bbd3e7f02994397, type: 2}
+  spawnPoints:
+  - {fileID: 4620802597478910, guid: c862321695618464091884e5908fd758, type: 2}
+  - {fileID: 4419293207851444, guid: da9d802c18cd6c74dad00b1370c73668, type: 2}
+  - {fileID: 4269501955149280, guid: 6cc60f02ce06d254cbcda101d798df0d, type: 2}
+--- !u!114 &114424502181836064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866090740888020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98031fb2011bd24fbc61ab9ea59a89e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealthController: {fileID: 0}
+  HUDCanvas: {fileID: 0}
 --- !u!114 &114910756822696706
 MonoBehaviour:
   m_ObjectHideFlags: 1

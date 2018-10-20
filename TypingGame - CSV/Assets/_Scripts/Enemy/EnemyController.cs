@@ -24,12 +24,10 @@ public class EnemyController : MonoBehaviour
 
     Animator anim;                              // Reference to the animator.
     AudioSource enemyAudio;                     // Reference to the audio source.
-    ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
+    //ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
     bool isDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
-
-    UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
 
 
     private void Start()
@@ -43,11 +41,8 @@ public class EnemyController : MonoBehaviour
 
         anim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
-        hitParticles = GetComponentInChildren<ParticleSystem>();
+        //hitParticles = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
-
-        nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
-
     }
 
     private void Update()
@@ -105,7 +100,7 @@ public class EnemyController : MonoBehaviour
         enemyAudio.Play();
 
         // Set the position of the particle system to where the hit was sustained.
-        hitParticles.transform.position = new Vector3 (0, 0, 0);
+        //hitParticles.transform.position = new Vector3 (0, 0, 0);
 
     }
 
