@@ -29,7 +29,6 @@ public class EnemyHealthController : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-
     void Update()
     {
         // If the enemy should be sinking...
@@ -81,11 +80,12 @@ public class EnemyHealthController : MonoBehaviour
 
     }
 
-
-
     public void Death()
     {
         currentHealth = 0;
+        // Increase the score by the enemy's score value.
+        ScoreController.score += scoreValue;
+
 
         // The enemy is dead.
         IsDead = true;
@@ -112,9 +112,6 @@ public class EnemyHealthController : MonoBehaviour
 
         // The enemy should no sink.
         isSinking = true;
-
-        // Increase the score by the enemy's score value.
-        ScoreController.score += scoreValue;
 
         // After 2 seconds destory the enemy.
         Destroy(gameObject, 2f);

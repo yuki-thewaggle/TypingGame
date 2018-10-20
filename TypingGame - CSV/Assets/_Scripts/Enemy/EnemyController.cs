@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
     //bool isDead;                                // Whether the enemy is dead.
     //bool isSinking;                             // Whether the enemy has started sinking through the floor.
     EnemyHealthController enemyHealthController;
+    bool isKilled;
 
     private void Start()
     {
@@ -49,8 +50,6 @@ public class EnemyController : MonoBehaviour
     private void Update()
     {
         UpdateInput();
-
-
     }
 
     private void SetInputText(string questionText)
@@ -74,8 +73,12 @@ public class EnemyController : MonoBehaviour
 
             if (typingSystem.isEnded())
             {
-                enemyHealthController.Death();
-                enemyHealthController.StartSinking();
+                if (!isKilled)
+                {
+                    enemyHealthController.Death();
+                    enemyHealthController.StartSinking();
+                    isKilled = true;
+                }
                 break;
             }
         }
