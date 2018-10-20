@@ -15,7 +15,7 @@ namespace CompleteProject
         AudioSource enemyAudio;                     // Reference to the audio source.
         ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
         CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
-        bool isDead;                                // Whether the enemy is dead.
+        public bool IsDead;                                // Whether the enemy is dead.
         bool isSinking;                             // Whether the enemy has started sinking through the floor.
 
 
@@ -46,7 +46,7 @@ namespace CompleteProject
         public void TakeDamage (int amount, Vector3 hitPoint)
         {
             // If the enemy is dead...
-            if(isDead)
+            if(IsDead)
                 // ... no need to take damage so exit the function.
                 return;
 
@@ -74,7 +74,7 @@ namespace CompleteProject
         void Death ()
         {
             // The enemy is dead.
-            isDead = true;
+            IsDead = true;
 
             // Turn the collider into a trigger so shots can pass through it.
             capsuleCollider.isTrigger = true;

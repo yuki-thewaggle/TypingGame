@@ -13,7 +13,7 @@ public class EnemyHealthController : MonoBehaviour
     AudioSource enemyAudio;                     // Reference to the audio source.
     ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
     CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
-    bool isDead;                                // Whether the enemy is dead.
+    [HideInInspector] public bool IsDead;                                // Whether the enemy is dead.
     bool isSinking;                             // Whether the enemy has started sinking through the floor.
 
 
@@ -44,7 +44,7 @@ public class EnemyHealthController : MonoBehaviour
     public void TakeDamage(int amount, Vector3 hitPoint)
     {
         // If the enemy is dead...
-        if (isDead)
+        if (IsDead)
             // ... no need to take damage so exit the function.
             return;
 
@@ -67,12 +67,28 @@ public class EnemyHealthController : MonoBehaviour
             Death();
         }
     }
+    public void TakeDamage()
+    {        // If the enemy is dead...
+        if (IsDead)
+            // ... no need to take damage so exit the function.
+            return;
+
+        // Play the hurt sound effect.
+        enemyAudio.Play();
+
+        // Set the position of the particle system to where the hit was sustained.
+        //hitParticles.transform.position = new Vector3 (0, 0, 0);
+
+    }
 
 
-    void Death()
+
+    public void Death()
     {
+        currentHealth = 0;
+
         // The enemy is dead.
-        isDead = true;
+        IsDead = true;
 
         // Turn the collider into a trigger so shots can pass through it.
         capsuleCollider.isTrigger = true;

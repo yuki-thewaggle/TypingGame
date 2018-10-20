@@ -57,11 +57,13 @@ GameObject:
   - component: {fileID: 114208054931423684}
   - component: {fileID: 114909546328116144}
   - component: {fileID: 114894752275860630}
+  - component: {fileID: 114958883844952646}
   - component: {fileID: 114515011705572864}
   - component: {fileID: 54080586176402234}
   - component: {fileID: 82097284862625404}
   - component: {fileID: 136284394551004976}
   - component: {fileID: 135674018093176514}
+  - component: {fileID: 195919583012329678}
   m_Layer: 0
   m_Name: EmenyZomBear
   m_TagString: Enemy
@@ -355,6 +357,23 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+--- !u!114 &114958883844952646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446263980497254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9e074f63b462e44959aa52cf0aff62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
+  IsDead: 0
 --- !u!135 &135674018093176514
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -428,3 +447,24 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5385571, y: 0.000000029802322, z: 0.00059360266}
     m_Extent: {x: 0.70241565, y: 0.76117194, z: 0.37453073}
   m_DirtyAABB: 0
+--- !u!195 &195919583012329678
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446263980497254}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 3
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1.3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

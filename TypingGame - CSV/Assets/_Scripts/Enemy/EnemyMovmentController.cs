@@ -16,33 +16,32 @@ public class EnemyMovmentController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealthController = player.GetComponent<PlayerHealthController>();
         enemyHealthController = GetComponent<EnemyHealthController>();
-        //nav = GetComponent<NavMeshAgent>();
+        nav = GetComponent<NavMeshAgent>();
         //nav.enabled = true;
-        NavMeshHit closestHit = new NavMeshHit();
-        if (NavMesh.SamplePosition(transform.position, out closestHit, 500, 1))
-        {
-            player.transform.position = closestHit.position;
-            nav = gameObject.AddComponent<NavMeshAgent>();
-            //TODO
-        }
+        //NavMeshHit closestHit = new NavMeshHit();
+        //if (NavMeshAgent.SamplePathPosition(NavMesh.AllAreas, 1.0f, out closestHit))
+        //{
+        //    transform.position = closestHit.position;
+        //    nav = gameObject.AddComponent<NavMeshAgent>();
+        //    //TODO
+        //}
     }
 
 
     void Update()
     {
         // If the enemy and the player have health left...
-        //if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
-        if (playerHealthController.currentHealth > 0)
+        if (enemyHealthController.currentHealth > 0 /*&& playerHealthController.currentHealth > 0*/)
         {
             // ... set the destination of the nav mesh agent to the player.
             nav.SetDestination(player.position);
 
         }
-        // Otherwise...
-        else
-        {
-            // ... disable the nav mesh agent.
-            nav.enabled = false;
-        }
+        //// Otherwise...
+        //else
+        //{
+        //    // ... disable the nav mesh agent.
+        //    nav.enabled = false;
+        //}
     }
 }
