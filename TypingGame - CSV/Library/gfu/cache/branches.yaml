@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666186674, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 2
+  lastUpdatedAtString: 2018-10-21T11:31:12.010+09:00
+  initializedAtString: 2018-10-21T11:26:25.298+09:00
+  localBranches:
+  - name: master
+    tracking: TypingGameCSV/master
+  - name: spawn
+    tracking: TypingGameCSV/spawn
+  remoteBranches:
+  - name: TypingGameCSV/master
+    tracking: '[None]'
+  - name: TypingGameCSV/spawn
+    tracking: '[None]'
+  remotes:
+  - name: TypingGameCSV
+    url: https://github.com/yuki-thewaggle/TypingGameCSV
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  localConfigBranches:
+    keys:
+    - master
+    - spawn
+    values:
+    - name: master
+      remote:
+        name: TypingGameCSV
+        url: https://github.com/yuki-thewaggle/TypingGameCSV
+      trackingBranch: master
+    - name: spawn
+      remote:
+        name: TypingGameCSV
+        url: https://github.com/yuki-thewaggle/TypingGameCSV
+      trackingBranch: spawn
+  remoteConfigBranches:
+    keys:
+    - TypingGameCSV
+    subKeys:
+    - Values:
+      - master
+      - spawn
+    subKeyValues:
+    - Values:
+      - name: master
+        remote:
+          name: TypingGameCSV
+          url: https://github.com/yuki-thewaggle/TypingGameCSV
+        trackingBranch: 
+      - name: spawn
+        remote:
+          name: TypingGameCSV
+          url: https://github.com/yuki-thewaggle/TypingGameCSV
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - TypingGameCSV
+    values:
+    - name: TypingGameCSV
+      url: https://github.com/yuki-thewaggle/TypingGameCSV
